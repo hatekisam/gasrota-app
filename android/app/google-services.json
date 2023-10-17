@@ -1,0 +1,80 @@
+{
+  "project_info": {
+    "project_number": "347994488523",
+    "firebase_url": "https://grasrota-2acc6.firebaseio.com",
+    "project_id": "grasrota-2acc6",
+    "storage_bucket": "grasrota-2acc6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347994488523:android:cf370bb876109d40ad254e",
+        "android_client_info": {
+          "package_name": "com.pixofy.grasrota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347994488523-63qu17nijrtgf72vih11iqd9jrbsic1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixofy.grasrota",
+            "certificate_hash": "3b2e5de6e7ce6c1502950a2d173d81d1a911148e"
+          }
+        },
+        {
+          "client_id": "347994488523-fmul14f0vbjj4u27eg6cfofr8s5hnfgd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixofy.grasrota",
+            "certificate_hash": "7a1abc7e52255a74e1ad6e04df2de04be390dd05"
+          }
+        },
+        {
+          "client_id": "347994488523-qtgsrrhtfn3j04intov0ig9u32go1su7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixofy.grasrota",
+            "certificate_hash": "2793032eda93520d36a67374b665c1c8f74ca659"
+          }
+        },
+        {
+          "client_id": "347994488523-r954lrdc4pqbea3u8bfo64gjidrusben.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixofy.grasrota",
+            "certificate_hash": "07af1c38c2b6a2be9f1a9436e4052a5f5027b7c1"
+          }
+        },
+        {
+          "client_id": "347994488523-t8srs6pdrh8dqpano08ir6jasq9g3qbs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHHwCQjMjb7ZjXf1ym8-OjaBUw0cynfnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347994488523-t8srs6pdrh8dqpano08ir6jasq9g3qbs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "347994488523-djrnhubjdkru1q667cstvuf2v62e3kvi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.pixofy.grasrota",
+                "app_store_id": "962194608"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
