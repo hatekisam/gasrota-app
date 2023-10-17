@@ -11,13 +11,13 @@ import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:crypto/crypto.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+// import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:grasrota/models/storedData.dart';
 import 'package:grasrota/shared/constants.dart';
 
 class AuthService {
   final FirebaseAuth auth = FirebaseAuth.instance;
-  final fb = FacebookLogin();
+  // final fb = FacebookLogin();
 
   // sign in with email & password
   // Future signInWithEmailAndPassword(String email, String password, bool isLogin) async {
@@ -296,49 +296,49 @@ class AuthService {
   }
 
   // sign in with facebook
-  Future signInWithFacebook() async {
-    final FacebookLoginResult result = await fb.logIn(["email"]);
-    switch (result.status) {
-      case FacebookLoginStatus.loggedIn:
-        try {
-          final String token = result.accessToken.token;
-          final credential = FacebookAuthProvider.credential(token);
-          var userData = await auth.signInWithCredential(credential);
+  // Future signInWithFacebook() async {
+  //   final FacebookLoginResult result = await fb.logIn(["email"]);
+  //   switch (result.status) {
+  //     case FacebookLoginStatus.loggedIn:
+  //       try {
+  //         final String token = result.accessToken.token;
+  //         final credential = FacebookAuthProvider.credential(token);
+  //         var userData = await auth.signInWithCredential(credential);
 
-          //check if user is non exsisting
-          DocumentSnapshot doc = await FirebaseFirestore.instance
-              .collection("users")
-              .doc(userData.user!.uid)
-              .get();
+  //         //check if user is non exsisting
+  //         DocumentSnapshot doc = await FirebaseFirestore.instance
+  //             .collection("users")
+  //             .doc(userData.user!.uid)
+  //             .get();
 
-          StoredData.checkedStat = null;
-          if (!doc.exists) {
-            final HttpsCallable callable =
-                FirebaseFunctions.instance.httpsCallable('createFacebookUsr');
+  //         StoredData.checkedStat = null;
+  //         if (!doc.exists) {
+  //           final HttpsCallable callable =
+  //               FirebaseFunctions.instance.httpsCallable('createFacebookUsr');
 
-            final FirebaseMessaging _firebaseMessaging =
-                FirebaseMessaging.instance;
+  //           final FirebaseMessaging _firebaseMessaging =
+  //               FirebaseMessaging.instance;
 
-            dynamic res = await callable.call(<String, dynamic>{
-              'uid': userData.user!.uid,
-              'name': userData.user!.displayName,
-              'image': userData.user!.photoURL,
-              'tlf': userData.user!.phoneNumber,
-              'token': await _firebaseMessaging.getToken(),
-            });
+  //           dynamic res = await callable.call(<String, dynamic>{
+  //             'uid': userData.user!.uid,
+  //             'name': userData.user!.displayName,
+  //             'image': userData.user!.photoURL,
+  //             'tlf': userData.user!.phoneNumber,
+  //             'token': await _firebaseMessaging.getToken(),
+  //           });
 
-            return {"url": res.data};
-          } else {
-            return result;
-          }
-        } catch (e) {}
-        break;
-      case FacebookLoginStatus.cancelledByUser:
-        break;
-      case FacebookLoginStatus.error:
-        break;
-    }
-  }
+  //           return {"url": res.data};
+  //         } else {
+  //           return result;
+  //         }
+  //       } catch (e) {}
+  //       break;
+  //     case FacebookLoginStatus.cancelledByUser:
+  //       break;
+  //     case FacebookLoginStatus.error:
+  //       break;
+  //   }
+  // }
 
   Future resetPassword(String email) async {
     try {

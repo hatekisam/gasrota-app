@@ -7,7 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+// import 'package:flutter_facebook_login/flutter_facebook_login.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:grasrota/models/usermodal.dart';
@@ -558,24 +558,24 @@ class _PopUpConfirmState extends State<PopUpConfirm> {
                               setState(() {
                                 isLoading = true;
                               });
-                              FacebookLoginResult fresult =
-                                  await _auth.signInWithFacebook();
-                              final String token = fresult.accessToken.token;
-                              final credential =
-                                  FacebookAuthProvider.credential(token);
-                              result =
-                                  await auth.signInWithCredential(credential);
-                              if (result == null) {
-                                setState(() {
-                                  error = "noe gikk galt";
-                                  isLoading = false;
-                                });
-                              } else {
-                                setState(() {
-                                  isLoading = false;
-                                  sideIndex = 1;
-                                });
-                              }
+                        //       FacebookLoginResult fresult =
+                        //           await _auth.signInWithFacebook();
+                        //       final String token = fresult.accessToken.token;
+                        //       final credential =
+                        //           FacebookAuthProvider.credential(token);
+                        //       result =
+                        //           await auth.signInWithCredential(credential);
+                        //       if (result == null) {
+                        //         setState(() {
+                        //           error = "noe gikk galt";
+                        //           isLoading = false;
+                        //         });
+                        //       } else {
+                        //         setState(() {
+                        //           isLoading = false;
+                        //           sideIndex = 1;
+                        //         });
+                        //       }
                             })
                           : InkWell(
                               child: Container(

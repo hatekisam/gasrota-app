@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -10,7 +9,6 @@ import 'package:grasrota/services/auth.dart';
 import 'package:grasrota/shared/constants.dart';
 import 'package:grasrota/shared/loading.dart';
 import 'package:grasrota/shared/search_list.dart';
-import 'package:image_picker/image_picker.dart';
 
 class Register extends StatefulWidget {
   final Function toggleView;
